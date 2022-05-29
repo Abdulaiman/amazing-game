@@ -66,12 +66,13 @@ btnHold.addEventListener('click', function () {
 
 btnNew.addEventListener('click', function () {
   playing = true;
+  document
+    .querySelector(`.player--${newScore}`)
+    .classList.remove('player--winner');
   currentScore = 0;
   newScore = 0;
   document.querySelector(`#current--${newScore}`).textContent = 0;
   document.getElementById(`score--${newScore}`).textContent = 0;
-  document
-    .querySelector(`.player--${newScore}`)
-    .classList.remove('player--winner');
+
   player0.classList.toggle('player--active');
 });
